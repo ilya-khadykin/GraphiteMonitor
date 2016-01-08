@@ -1,0 +1,10 @@
+module.exports = {
+	GmailAuth: {
+		email: 'your_user_name@domain_name.com',
+		password: 'password to your Gmail account'
+	},
+	sendToAddress: 'an email address to which emails alerts will be sent',
+	slack_url: 'https://hooks.slack.com/services/xxxxxx/xxxxx/xxxxxxx', 
+	httpServerIp: '192.168.57.136',
+	httpServerPort: '3008'
+};

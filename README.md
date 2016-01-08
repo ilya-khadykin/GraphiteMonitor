@@ -1,10 +1,14 @@
 # GraphiteMonitor
 Monitors metrics on Graphite's instance using preconfigured thresholds (from `metrics.js` file).
+
 [Graphite](https://github.com/graphite-project/graphite-web "Graphite Project on GitHub") is a highly scalable real-time graphing system that offers the Render URL API on wich this app is based on. The initial idea of the app was to automate routine monitoring of critical metrics, instead of watching graphs yourself this app will send an email alert or\and post a message to your Slack chatroom. 
+
 In the current version the app just ignores any network errors or cases when Graphite returns empty response which leads to ignoring the actual data for that time period. It's a flow in logic of the app and I'm going to address it as soon as possible.
 
 ## How it works
-GraphiteMonitor app will send GET HTTP requests at regular intervals to a Graphite instance and log the results. If the requested metric value is under preconfigured treshold condition an email alert will be sent out. You must provide valid Gmail credentials and other configuration information in `config.js` file as well as infromation of a metrics you are going to monitor with thresholds in `metrics.js` file (see `config.js.example` and `metrics.js.example` to learn used format).
+GraphiteMonitor app will send GET HTTP requests at regular intervals to a Graphite instance and log the results. If the requested metric value is under preconfigured treshold condition an email alert will be sent out. 
+
+You must provide valid Gmail credentials and other configuration information in `config.js` file as well as infromation of a metrics you are going to monitor with thresholds in `metrics.js` file (see `config.js.example` and `metrics.js.example` to learn used format).
 
 ## How to use it
 Add your metrics using the folowing example:
@@ -46,7 +50,7 @@ The app is written in javascript on top of node.js platform. It requires the fol
 - http
 - nodemailer
 
-Use **npm**, issue the following command in the app`s directory:
+To install the app use **npm**, issue the following command in the app`s directory:
 ```shell
 npm install
 ```
@@ -55,6 +59,7 @@ It will automatically install any dependent packages for you.
 You can now run the app using the following command iside app's directory:
 ```shell
 node app.js
+```
 
 ## To Do
 Fixes:

@@ -1,0 +1,13 @@
+module.exports = [
+    {
+        name: 'Short Metric Name (used in email subject)',
+        description: 'Long and detailed description of the metric',
+        severity: 'Warning (or your own String, ESCALATE IMMEDIATELY for example)',
+        graphiteJSONUrl: 'https://url_to_your_graphite_instance.com/render?target=aliasByNode(web.mem.UsedMB.*,5)&from=-10minutes&untill=now&format=json',
+        graphitePNGUrl: 'https://url_to_your_graphite_instance.com/render?target=aliasByNode(web.mem.UsedMB.*,5)&from=-1d&untill=now&width=800&height=800&hideLegend=False',
+        typeOfCheck: 'SPIKE',
+        thresholdForAlert: { spike: 2000 },
+        timeoutInMinutesForNextAlert: 60,
+        interval: 10
+    }
+];

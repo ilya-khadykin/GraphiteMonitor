@@ -1,0 +1,21 @@
+{
+  "name": "GraphiteMonitor",
+  "version": "0.0.1",
+  "description": "Monitors metrics on Graphite's instance using preconfigured thresholds",
+  "main": "app.js",
+  "keywords": [
+    "monitoring",
+    "graphite"
+  ],
+  "author": "Khadykin Ilya <ilya.khadykin@sperasoft.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "events": "^1.1.0",
+    "http": "0.0.0",
+    "nodemailer": "^1.11.0",
+    "request": "^2.67.0",
+    "stream": "0.0.2",
+    "util": "^0.10.3"
+  }
+}
