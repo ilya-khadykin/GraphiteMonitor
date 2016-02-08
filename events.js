@@ -17,7 +17,7 @@ function onStop (name, description, graphitePNGUrl, self) {
 
     console.log(name + ' monitor has stopped');
     mailer({
-        from: config.GmailAuth.email,   
+        from: config.sendToAddress,   
         to: config.sendToAddress,  
         subject: name + ' monitor has stopped',   
         body: '<p>' + name + ' is no longer being minitored.</p>' 
@@ -44,7 +44,7 @@ function onAlert (self) { //function onAlert (report, self)
     // sending email notification
     console.log(emailSubject);
     mailer({
-            from: config.GmailAuth.email,
+            from: config.sendToAddress,
             to: config.sendToAddress, 
             subject: emailSubject,
             body: this.getEmailReport(),  // passing generated html message of the report used as email body
