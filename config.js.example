@@ -1,7 +1,7 @@
 module.exports = {
-	GmailAuth: {
-		email: 'your_user_name@domain_name.com',
-		password: 'password to your Gmail account'
+	smtpConfig: {
+		host: 'hostname to your smtp server',
+		port: 'port on smtp server, default is 25'
 	},
 	sendToAddress: 'an email address to which emails alerts will be sent',
 	slack_url: 'https://hooks.slack.com/services/xxxxxx/xxxxx/xxxxxxx', 
